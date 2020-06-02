@@ -85,5 +85,5 @@ function setWrong(on) {
 
 setup(6);
 
-const correct = new Audio('ff-correct.mp3');
-const wrong = new Audio('ff-wrong.mp3');
+const correct = new Audio('good.mp3');
+const wrong = new Audio('wrong.mp3');
