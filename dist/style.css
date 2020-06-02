@@ -1,0 +1,106 @@
+@font-face {
+    font-family: Connection;
+    src: url("http://localhost:3000/familiada.ttf") format("truetype");
+}
+@font-face {
+    font-family: PPixel;
+    src: url("http://localhost:3000/pixel-font.ttf") format("truetype");
+}
+
+.board {
+  width: 100%;
+  max-width: 700px;
+  background: #000;
+  font-size: 2rem;
+  color: #979a34;
+  padding: 1rem;
+  font-family: Familiada;
+  display: flex;
+}
+
+.board-inner {
+  flex: 1;
+}
+
+.line {
+  display: flex;
+  margin: 1rem 0.5rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.line.reveal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #000;
+  right: 0;
+  left: 3rem;
+  animation: shrink-right 0.4s forwards;
+}
+
+.pos {
+  width: 2rem;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.answer {
+  flex: 1;
+}
+
+.score {
+  width: 3rem;
+  text-align: center;
+}
+
+.total {
+  margin-top: 2rem;
+}
+
+.total .answer {
+  text-align: right;
+  margin-right: 3rem;
+}
+
+.side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
+.side > span {
+  display: none
+}
+
+.side.wrong > span {
+  display: block;
+  font-size: 8rem
+}
+
+.button-wrapper {
+  margin: 0 0 3rem 0;
+}
+
+.buttons {
+  margin-bottom: 0.5rem;
+}
+
+
+@keyframes shrink-right {
+  0%   {
+    left: 3rem;
+  }
+  99% {
+    opacity: 1;
+    left: 100%;
+  }
+  100% {
+    overflow: hidden;
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
